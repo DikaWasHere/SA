@@ -1,0 +1,28 @@
+int main(int argc, char** argv) 
+{
+// inisialisasi graf
+graph.setIsDirected(true);
+graph.setNumLevels(4);
+graph.setNumNodes(7);
+// tambahkan nodes
+graph.addNode(0, 0, 1.1f);
+graph.addNode(1, 0, 0.95f);
+graph.addNode(2, 1, 0.9f);
+graph.addNode(3, 1, 1.05f);
+graph.addNode(4, 3, 1.1f);
+graph.addNode(5, 2, 0.85f);
+graph.addNode(6, 3, 0.95f);
+// tambahkan edges
+graph.addEdge(0, 1); 
+ graph.addEdge(0, 3); 
+ graph.addEdge(2, 0); 
+ graph.addEdge(2, 3); 
+ graph.addEdge(2, 4); 
+ graph.addEdge(2, 6);
+graph.addEdge(3, 1); 
+graph.addEdge(4, 5); 
+graph.addEdge(4, 6); 
+graph.addEdge(5, 2); 
+graph.addEdge(6, 3); 
+ // perkiraan posisi node
+ graph.setNodePosition();
